@@ -2,11 +2,7 @@
 include "../core/autoload.php";
 include "../core/app/model/PersonData.php";
 
-require_once '../PhpWord/Autoloader.php';
-use PhpOffice\PhpWord\Autoloader;
-use PhpOffice\PhpWord\Settings;
-
-Autoloader::register();
+require '../vendor/autoload.php';
 
 $word = new  PhpOffice\PhpWord\PhpWord();
 $clients = PersonData::getProviders();

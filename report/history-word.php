@@ -5,11 +5,7 @@ include "../core/app/model/CategoryData.php";
 include "../core/app/model/OperationData.php";
 include "../core/app/model/OperationTypeData.php";
 
-require_once '../PhpWord/Autoloader.php';
-use PhpOffice\PhpWord\Autoloader;
-use PhpOffice\PhpWord\Settings;
-
-Autoloader::register();
+require '../vendor/autoload.php';
 
 $word = new  PhpOffice\PhpWord\PhpWord();
 $product = ProductData::getById($_GET["id"]);

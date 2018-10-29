@@ -3,11 +3,8 @@ include "../core/autoload.php";
 include "../core/app/model/ProductData.php";
 include "../core/app/model/CategoryData.php";
 
-require_once '../PhpWord/Autoloader.php';
-use PhpOffice\PhpWord\Autoloader;
-use PhpOffice\PhpWord\Settings;
+require '../vendor/autoload.php';
 
-Autoloader::register();
 
 $word = new  PhpOffice\PhpWord\PhpWord();
 $products = ProductData::getAll();
