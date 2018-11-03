@@ -138,7 +138,7 @@
 
 
             <li class="treeview">
-              <a href="#"><i class='fa fa-cog'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <a href="#"><i class='fa fa-cog'></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="./?view=users">Usuarios</a></li>
            
@@ -169,7 +169,7 @@
       <?php else:?>
 <div class="login-box">
       <div class="login-logo">
-        <a href="./">Ferreteria<b>RM</b></a>
+        <a href="./">La Paraguayita</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <form action="./?action=processlogin" method="post">
