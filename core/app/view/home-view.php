@@ -93,8 +93,22 @@ foreach($products as $product){
 <?php endif;?>
 
 </div>
-<div class="clearfix"></div>
+
+<!-- Cotización de mnedas cambio chaco  -->
+<div class="container-fluid">
+<div class="row">
+  
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <iframe width="400" height="300" src="http://www.cambioschaco.com.py/widgets/cotizacion/?lang=es" frameborder="0"> </iframe>
+
+  </div>
+ 
+
+
+
+<div class="col-xs-12 col-sm-4 col-md-8">
 <?php if(count($products)>0){?>
+  <h3><strong>Productos escazos</strong></h3>
 <br><table class="table table-bordered table-hover">
 	<thead>
 		<th >Codigo</th>
@@ -136,4 +150,8 @@ endforeach;
 ?>
 <br><br><br><br><br><br><br><br><br><br>
 	</div>
+</div>
+
+</div>
+</div>
 </div>

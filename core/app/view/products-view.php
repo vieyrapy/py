@@ -1,61 +1,61 @@
 <div class="row">
   <div class="col-md-12">
-<div class="btn-group  pull-right">
-  <a href="index.php?view=newproduct" class="btn btn-default">Agregar Producto</a>
-<div class="btn-group pull-right">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="report/products-word.php">Word 2007 (.docx)</a></li>
-  </ul>
-</div>
-</div>
+    <div class="btn-group  pull-right">
+      <a href="index.php?view=newproduct" class="btn btn-default">Agregar Producto</a>
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-download"></i> Descargar <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="report/products-word.php">Word 2007 (.docx)</a></li>
+      </ul>
+    </div>
+    </div>
     <h1>Lista de Productos</h1>
     <div class="clearfix"></div>
 
 
-<?php
-$page = 1;
-if (isset($_GET["page"])) {
-    $page = $_GET["page"];
-}
-$limit = 10;
-if (isset($_GET["limit"]) && $_GET["limit"] != "" && $_GET["limit"] != $limit) {
-    $limit = $_GET["limit"];
-}
-//Traer todos los prodcutos
+        <?php
+        $page = 1;
+        if (isset($_GET["page"])) {
+            $page = $_GET["page"];
+        }
+        $limit = 10;
+        if (isset($_GET["limit"]) && $_GET["limit"] != "" && $_GET["limit"] != $limit) {
+            $limit = $_GET["limit"];
+        }
+        //Traer todos los prodcutos
 
-$products = ProductData::getAll();
-if (count($products) > 0) {
+        $products = ProductData::getAll();
+        if (count($products) > 0) {
 
-    if ($page == 1) {
-        $curr_products = ProductData::getAllByPage($products[0]->id, $limit);
-    } else {
-        $curr_products = ProductData::getAllByPage($products[($page - 1) * $limit]->id, $limit);
+            if ($page == 1) {
+                $curr_products = ProductData::getAllByPage($products[0]->id, $limit);
+            } else {
+                $curr_products = ProductData::getAllByPage($products[($page - 1) * $limit]->id, $limit);
 
-    }
-    $npaginas = floor(count($products) / $limit);
-    $spaginas = count($products) % $limit;
+            }
+            $npaginas = floor(count($products) / $limit);
+            $spaginas = count($products) % $limit;
 
-    if ($spaginas > 0) {$npaginas++;}
+            if ($spaginas > 0) {$npaginas++;}
 
-    ?>
+            ?>
 
   <h3>Pagina <?php echo $page . " de " . $npaginas; ?></h3>
-<div class="btn-group pull-right">
-<?php
-$px = $page - 1;
-    if ($px > 0):
-    ?>
-<a class="btn btn-sm btn-default" href="<?php echo "index.php?view=products&limit=$limit&page=" . ($px); ?>"><i class="glyphicon glyphicon-chevron-left"></i> Atras </a>
+  <div class="btn-group pull-right">
+      <?php
+      $px = $page - 1;
+          if ($px > 0):
+          ?>
+  <a class="btn btn-sm btn-default" href="<?php echo "index.php?view=products&limit=$limit&page=" . ($px); ?>"><i class="glyphicon glyphicon-chevron-left"></i> Atras </a>
 <?php endif;?>
 
-<?php
-$px = $page + 1;
-    if ($px <= $npaginas):
-    ?>
-<a class="btn btn-sm btn-default" href="<?php echo "index.php?view=products&limit=$limit&page=" . ($px); ?>">Adelante <i class="glyphicon glyphicon-chevron-right"></i></a>
+      <?php
+      $px = $page + 1;
+          if ($px <= $npaginas):
+          ?>
+  <a class="btn btn-sm btn-default" href="<?php echo "index.php?view=products&limit=$limit&page=" . ($px); ?>">Adelante <i class="glyphicon glyphicon-chevron-right"></i></a>
 <?php endif;?>
 </div>
 
@@ -63,18 +63,19 @@ $px = $page + 1;
 <div class="clearfix"></div>
 <br><table class="table table-borderd table-hover">
   <thead>
-    <th>Codigo</th>
+    <th>Código</th>
     <th>Imagen</th>
     <th>Nombre</th>
     <th>Precio Entrada</th>
     <th>Precio Salida</th>
     <th>Categoria</th>
     <th>Proveedor</th>
-    <th>Minima</th>
+    <th>Mínimo</th>
     <th>Activo</th>
     <th></th>
   </thead>
   <?php foreach ($curr_products as $product): ?>
+  <tbody>
   <tr>
     <td><?php echo $product->barcode; ?></td>
     <td>
@@ -98,6 +99,7 @@ $px = $page + 1;
     <a href="index.php?view=delproduct&id=<?php echo $product->id; ?>" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
     </td>
   </tr>
+  </tbody>
   <?php endforeach;?>
 </table>
 

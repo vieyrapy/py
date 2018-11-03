@@ -32,18 +32,20 @@
 			<?php
 			foreach($users as $user){
 				?>
-				<tr>
-				<td><?php echo $user->company; ?></td>
-				<td><?php echo $user->name." ".$user->lastname; ?></td>
-				<td><?php echo $user->address1; ?></td>
-				<td><?php echo $user->email1; ?></td>
-				<td><?php echo $user->phone1; ?></td>
-				<td style="width:130px;">
-				<a href="index.php?view=editprovider&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a>
-				<a href="index.php?view=delprovider&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
+				<tbody>
+					<tr>
+					<td><?php echo $user->company; ?></td>
+					<td><?php echo $user->name." ".$user->lastname; ?></td>
+					<td><?php echo $user->address1; ?></td>
+					<td><?php echo $user->email1; ?></td>
+					<td><?php echo $user->phone1; ?></td>
+					<td style="width:130px;">
+					<a href="index.php?view=editprovider&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a>
+					<a href="index.php?view=delprovider&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
 
-				</td>
-				</tr>
+					</td>
+					</tr>
+				</tbody>
 				<?php
 
 			}
@@ -56,7 +58,7 @@
 
 
 		?>
-
+			</table>
 
 	</div>
 </div>

@@ -35,9 +35,14 @@
     
 
     <div class="wrapper">
+
+     
+      
+    
       <!-- Main Header -->
             <?php if (isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])): ?>
-            <header class="main-header">
+            <header class="main-header header">
+        
               <!-- Logo -->
               <a href="./" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -83,6 +88,7 @@
                   </ul>
                 </div>
               </nav>
+
             </header>
             <!-- Left side column. contains the logo and sidebar -->
             <aside class="main-sidebar">
@@ -94,7 +100,7 @@
 
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu">
-                  <li class="header">ADMINISTRACION</li>
+                  <li class="header">MÓDULOS</li>
                   <?php if (isset($_SESSION["user_id"])): ?>
                               <li><a href="./index.php?view=home"><i class='fa fa-home'></i> <span>Inicio</span></a></li>
                   <li><a href="./?view=sell"><i class='fa fa-usd'></i> <span>Vender</span></a></li>
