@@ -100,7 +100,7 @@
 
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu">
-                  <li class="header">MÓDULOS</li>
+                  <li class="header">MENÚ PRINCIPAL</li>
                   <?php if (isset($_SESSION["user_id"])): ?>
                               <li><a href="./index.php?view=home"><i class='fa fa-home'></i> <span>Inicio</span></a></li>
                   <li><a href="./?view=sell"><i class='fa fa-usd'></i> <span>Vender</span></a></li>
@@ -109,7 +109,7 @@
                   <li><a href="./?view=products"><i class='fa fa-glass'></i> <span>Productos</span></a></li>
 
                   <li class="treeview">
-                    <a href="#"><i class='fa fa-database'></i> <span>Catalogos</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="#"><i class='fa fa-database'></i> <span>Catálogos</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
                       <li><a href="./?view=categories">Categorias</a></li>
                       <li><a href="./?view=clients">Clientes</a></li>
