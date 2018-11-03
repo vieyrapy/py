@@ -1,5 +1,5 @@
 La Paraguayita
-App para control de inventario y ventas
+App para control 
 
 
 
