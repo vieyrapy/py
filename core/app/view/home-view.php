@@ -10,9 +10,13 @@ foreach($products as $product){
 	}
 }
 	?>
+
 <div class="row">
-	<div class="col-md-12">
-		<h1><b>La Paraguayita</b></h1>
+	<div class="col-md-9">
+		<h1><b>Muy buen día! <?php if (isset($_SESSION["user_id"])) {echo UserData::getById($_SESSION["user_id"])->name;}?> </b></h1>
+</div>
+<div class="col-md-3">
+    <h3><b><script type="text/javascript">Fecha()</script></b></h3>
 </div>
 </div>
   <div class="row">
@@ -81,16 +85,16 @@ foreach($products as $product){
 
 <div class="row">
 	<div class="col-md-12">
-<?php if($found):?>
-<div class="btn-group pull-right">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="report/alerts-word.php">Word 2007 (.docx)</a></li>
-  </ul>
-</div>
-<?php endif;?>
+    <?php if($found):?>
+  <div class="btn-group pull-right">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-download"></i> Descargar <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="report/alerts-word.php">Word 2007 (.docx)</a></li>
+    </ul>
+  </div>
+  <?php endif;?>
 
 </div>
 
@@ -111,7 +115,7 @@ foreach($products as $product){
   <h3><strong>Productos escazos</strong></h3>
 <br><table class="table table-bordered table-hover">
 	<thead>
-		<th >Codigo</th>
+		<th >Código</th>
 		<th>Nombre del producto</th>
 		<th>En Stock</th>
 		<th></th>
@@ -142,7 +146,7 @@ endforeach;
 	?>
 	<div class="jumbotron">
 		<h2>No hay alertas</h2>
-		<p>Por el momento no hay alertas de inventario, estas se muestran cuando el inventario ha alcanzado el nivel minimo.</p>
+		<p>Por el momento no hay alertas de inventario, estas se muestran cuando el inventario ha alcanzado el nivel mínimo.</p>
 	</div>
 	<?php
 }
