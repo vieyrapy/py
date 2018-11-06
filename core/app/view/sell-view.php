@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-12">
 	<h1>Venta</h1>
-	<p><b>Buscar producto por nombre o por codigo:</b></p>
+	<p><b>Buscar producto por nombre o por código:</b></p>
 		<form id="searchp">
 		<div class="row">
 			<div class="col-md-6">
@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		</form>
-	</div>
+	
 <div id="show_search_results"></div>
 <script>
 //jQuery.noConflict();
@@ -46,7 +46,7 @@ $(document).ready(function(){
 <p></p>
 <table class="table table-bordered table-hover">
 <tr class="danger">
-	<th>Codigo</th>
+	<th>Código</th>
 	<th>Producto</th>
 	<th>Mensaje</th>
 </tr>
@@ -73,7 +73,7 @@ $total = 0;
 <h2>Lista de venta</h2>
 <table class="table table-bordered table-hover">
 <thead>
-	<th style="width:30px;">Codigo</th>
+	<th style="width:30px;">Código</th>
 	<th style="width:30px;">Cantidad</th>
 	<th style="width:30px;">Unidad</th>
 	<th>Producto</th>
@@ -184,4 +184,4 @@ $clients = PersonData::getClients();
 <br><br><br><br><br>
 <?php endif; ?>
 
-</div>
+</div></div>

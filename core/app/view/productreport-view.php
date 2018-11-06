@@ -23,8 +23,8 @@ if($product!=null):
 				</thead>
 				<tbody>
 					<tr>
-						<td id="startDate">2012-02-20</td>
-						<td id="endDate">2012-02-25</td>
+						<td id="startDate">2018-02-20</td>
+						<td id="endDate">2018-02-25</td>
 						<td id="">
 						<form>
 						<input type="hidden" name="view" value="productreport">

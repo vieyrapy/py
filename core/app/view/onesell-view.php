@@ -54,7 +54,7 @@ $user = $sell->getUser();
 </table>
 <br><table class="table table-bordered table-hover">
 	<thead>
-		<th>Codigo</th>
+		<th>Código</th>
 		<th>Cantidad</th>
 		<th>Nombre del Producto</th>
 		<th>Precio Unitario</th>

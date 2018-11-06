@@ -83,25 +83,8 @@
                     <!-- User Account Menu -->
                     <li class="dropdown user user-menu">
                       <!-- Menu Toggle Button -->
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <!-- The user image in the navbar-->
-                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                        <span class=""><?php if (isset($_SESSION["user_id"])) {
-          echo UserData::getById($_SESSION["user_id"])->name;
-
-      }?> <b class="caret"></b> </span>
-
-                      </a>
-                      <ul class="dropdown-menu">
-                        <!-- The user image in the menu -->
-
-                        <!-- Menu Footer-->
-                        <li class="user-footer">
-                          <div class="pull-right">
-                            <a href="./logout.php" class="btn btn-default btn-flat">Salir</a>
-                          </div>
-                        </li>
-                      </ul>
+                      <a href="./logout.php" class="btn btn-default btn-flat">Cerrar sesión</a>
+                    
                     </li>
                     <!-- Control Sidebar Toggle Button -->
                   </ul>
@@ -160,6 +143,10 @@
 
                     </ul>
                   </li>
+
+                  <li class="treeview">
+                    <a href="./?view=calendario"><i class='fa fa-calendar'></i> <span>Agenda</span> </i></a>
+                   </li>
                 <?php endif;?>
 
                 </ul>

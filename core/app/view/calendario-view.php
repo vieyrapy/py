@@ -39,7 +39,7 @@ $events = $req->fetchAll();
 		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<form class="form-horizontal" method="POST" action="addEvent.php">
+			<form class="form-horizontal" method="POST" action="?view=addEvent">
 			
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -98,7 +98,7 @@ $events = $req->fetchAll();
 		<div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<form class="form-horizontal" method="POST" action="editEventTitle.php">
+			<form class="form-horizontal" method="POST" action="?view=editEventTitle">
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="myModalLabel">Edit Event</h4>
@@ -162,10 +162,10 @@ $events = $req->fetchAll();
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay,agendaWeek,agendaDay'
+				right: 'basicDay,month,basicWeek,agendaWeek,agendaDay'
 			},
 			locale:'es',
-			defaultDate: '2018-01-12',
+			
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
 			selectable: true,
@@ -237,7 +237,7 @@ $events = $req->fetchAll();
 			Event[2] = end;
 			
 			$.ajax({
-			 url: 'editEventDate.php',
+			 url: '?view=editEventDate',
 			 type: "POST",
 			 data: {Event:Event},
 			 success: function(rep) {
