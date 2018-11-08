@@ -11,7 +11,7 @@
     <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link href="plugins/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <link href="plugins/dist/css/skins/skin-black.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
@@ -179,6 +179,8 @@
 
 
       <!-- Nombre de la empresa  -->
+      <div class="wrapper-login">
+
       <div class="login-box">
           <div class="login-logo">
               <a href="./">
@@ -209,9 +211,10 @@
               </form>
           </div>
       </div>
+      </div>
       <?php endif;?>
 
-
+ </div>
     </div><!-- ./wrapper -->
 
     <!-- REQUIRED JS SCRIPTS -->
